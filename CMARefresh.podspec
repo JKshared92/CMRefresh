@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "CMRefresh"
+  s.name         = "CMARefresh"
   s.version      = "0.0.1"
   s.summary      = "对MJRefresh二次封装"
 
