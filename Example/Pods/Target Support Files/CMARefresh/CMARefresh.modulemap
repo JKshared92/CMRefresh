@@ -1,0 +1,6 @@
+framework module CMARefresh {
+  umbrella header "CMARefresh-umbrella.h"
+
+  export *
+  module * { export * }
+}

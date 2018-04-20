@@ -1,0 +1,23 @@
+PODS:
+  - CMARefresh (0.0.1):
+    - MJRefresh
+  - MJRefresh (3.1.15.3)
+
+DEPENDENCIES:
+  - CMARefresh (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - MJRefresh
+
+EXTERNAL SOURCES:
+  CMARefresh:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CMARefresh: 8be10e65be1e9a9cf47e8257066b32300dfcad05
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+
+PODFILE CHECKSUM: 3ca451c8096e7292dd217e41e06de242e147a938
+
+COCOAPODS: 1.5.0

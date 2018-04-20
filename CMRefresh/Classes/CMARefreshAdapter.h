@@ -1,5 +1,5 @@
 //
-//  RefreshAdapter.h
+//  CMARefreshAdapter.h
 //  Pods
 //
 //  Created by on 2017/8/13.
@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <MJRefresh/MJRefresh.h>
-#import "RefreshAdapterDelegate.h"
-#import "RefreshAdapterDatasouce.h"
+#import "CMARefreshAdapterDelegate.h"
+#import "CMARefreshAdapterDatasouce.h"
 
-typedef NS_ENUM(NSInteger, RefreshType) {
-    RefreshTypeAll      = 0, /** 同时支持下拉刷新和上拉加载更多 */
-    RefreshTypePullDown = 1, /** 只支持下拉刷新 */
-    RefreshTypePullUp   = 2, /** 只支持上拉加载更多 */
+typedef NS_ENUM(NSInteger, CMARefreshType) {
+    CMARefreshTypeAll      = 0, /** 同时支持下拉刷新和上拉加载更多 */
+    CMARefreshTypePullDown = 1, /** 只支持下拉刷新 */
+    CMARefreshTypePullUp   = 2, /** 只支持上拉加载更多 */
 };
 
-@interface RefreshAdapter : NSObject
+@interface CMARefreshAdapter : NSObject
 
 /**
  需要添加上拉下拉空间的视图
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, RefreshType) {
 /**
  刷新的类型
  */
-@property (assign, nonatomic, readonly ) RefreshType      refreshType;
+@property (assign, nonatomic, readonly ) CMARefreshType      refreshType;
 
 /**
  总的数据量
@@ -52,12 +52,12 @@ typedef NS_ENUM(NSInteger, RefreshType) {
 /**
  代理者，可监控刷新控件的生命周期
  */
-@property (weak  , nonatomic, readwrite) id <RefreshAdapterDelegate>  adapterDelegate;
+@property (weak  , nonatomic, readwrite) id <CMARefreshAdapterDelegate>  adapterDelegate;
 
 /**
  数据源，可定制头部或底部的刷新控件
  */
-@property (weak  , nonatomic, readwrite) id <RefreshAdapterDatasouce> adapterDatasouce;
+@property (weak  , nonatomic, readwrite) id <CMARefreshAdapterDatasouce> adapterDatasouce;
 
 /**
  初始化
@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, RefreshType) {
  @return 返回实例
  */
 + (instancetype)adapterWithScrollView:(UIScrollView *)scrollView
-                          refreshType:(RefreshType)refreshType;
+                          refreshType:(CMARefreshType)refreshType;
 
 /**
  重新配置实例

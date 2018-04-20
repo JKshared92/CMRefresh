@@ -1,5 +1,5 @@
 //
-//  RefreshAdapterDatasouce.h
+//  CMARefreshAdapterDatasouce.h
 //  Pods
 //
 //  Created by on 2017/8/15.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class RefreshAdapter;
+@class CMARefreshAdapter;
 @class MJRefreshHeader;
 @class MJRefreshFooter;
 
-@protocol RefreshAdapterDatasouce <NSObject>
+@protocol CMARefreshAdapterDatasouce <NSObject>
 
 @optional;
 - (Class)refreshHeaderOfClass;

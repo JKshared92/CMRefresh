@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CMARefresh"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "对MJRefresh二次封装"
 
   s.homepage     = "https://github.com/JKshared92/CMRefresh"

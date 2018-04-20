@@ -1,26 +1,26 @@
 //
-//  RefreshAdapter.m
+//  CMARefreshAdapter.m
 //  Pods
 //
 //  Created by on 2017/8/13.
 //
 //
 
-#import "RefreshAdapter.h"
+#import "CMARefreshAdapter.h"
 
-@interface RefreshAdapter ()
+@interface CMARefreshAdapter ()
 
 @end
 
-@implementation RefreshAdapter
+@implementation CMARefreshAdapter
 
 + (instancetype)adapterWithScrollView:(UIScrollView *)scrollView
-                          refreshType:(RefreshType)refreshType{
+                          refreshType:(CMARefreshType)refreshType{
     return [[self alloc] initWithScrollView:scrollView refreshType:refreshType];
 }
 
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView
-                       refreshType:(RefreshType)refreshType{
+                       refreshType:(CMARefreshType)refreshType{
     self = [super init];
     if (self) {
         _scrollView                 = scrollView;
@@ -89,14 +89,14 @@
     [self removeRefreshfooter];
     
     switch (self.refreshType) {
-        case RefreshTypeAll:
+        case CMARefreshTypeAll:
             [self addRefreshHeader];
             [self addRefreshFooter];
             break;
-        case RefreshTypePullDown:
+        case CMARefreshTypePullDown:
             [self addRefreshHeader];
             break;
-        case RefreshTypePullUp:
+        case CMARefreshTypePullUp:
             [self addRefreshFooter];
             break;
         default:
@@ -145,7 +145,7 @@
 
 #pragma mark - 外部方法-上拉下拉
 - (void)beginRefreshingHeader{
-    if (self.refreshType == RefreshTypePullDown || self.refreshHeader.isRefreshing) {
+    if (self.refreshType == CMARefreshTypePullDown || self.refreshHeader.isRefreshing) {
         return;
     }
     
@@ -153,7 +153,7 @@
 }
 
 - (void)beginRefreshingFooter{
-    if (self.refreshType == RefreshTypePullUp || self.refreshFooter.isRefreshing) {
+    if (self.refreshType == CMARefreshTypePullUp || self.refreshFooter.isRefreshing) {
         return;
     }
     
@@ -208,7 +208,7 @@
     return self.scrollView.mj_totalDataCount;
 }
 
-- (void)setAdapterDatasouce:(id<RefreshAdapterDatasouce>)adapterDatasouce{
+- (void)setAdapterDatasouce:(id<CMARefreshAdapterDatasouce>)adapterDatasouce{
     _adapterDatasouce = adapterDatasouce;
     [self reloadAdapter];
 }
