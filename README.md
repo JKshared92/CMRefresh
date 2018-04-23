@@ -4,7 +4,7 @@
 
 因为名字被占用了，改为CMARefresh
 
-pod 'CMARefresh'
+        pod 'CMARefresh'
 
 ## 使用方法
 * 添加属性
