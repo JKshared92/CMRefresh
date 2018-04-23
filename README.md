@@ -14,22 +14,22 @@ pod 'CMARefresh'
 
 * 初始化
 
-`- (CMARefreshAdapter *)refreshAdapter {
+- (CMARefreshAdapter *)refreshAdapter {
 
 if (!_refreshAdapter) {
 
-_refreshAdapter = [CMARefreshAdapter adapterWithScrollView:self.tableview refreshType:CMARefreshTypeAll];
+    _refreshAdapter = [CMARefreshAdapter adapterWithScrollView:self.tableview refreshType:CMARefreshTypeAll];
 
-_refreshAdapter.adapterDelegate = self;
+    _refreshAdapter.adapterDelegate = self;
 
-_refreshAdapter.adapterDatasouce = self;
+    _refreshAdapter.adapterDatasouce = self;
 
 }
 
 return _refreshAdapter;
 
 }
-`
+
 
 * 添加代理
 
@@ -37,6 +37,7 @@ return _refreshAdapter;
 `
 
 * 选择代理方法
+
 
 #pragma mark - CMARefreshAdapterDelegate
 
