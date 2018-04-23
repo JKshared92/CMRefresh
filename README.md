@@ -15,12 +15,19 @@ pod 'CMARefresh'
 * 初始化
 
 `- (CMARefreshAdapter *)refreshAdapter {
+
 if (!_refreshAdapter) {
+
 _refreshAdapter = [CMARefreshAdapter adapterWithScrollView:self.tableview refreshType:CMARefreshTypeAll];
+
 _refreshAdapter.adapterDelegate = self;
+
 _refreshAdapter.adapterDatasouce = self;
+
 }
+
 return _refreshAdapter;
+
 }
 `
 
